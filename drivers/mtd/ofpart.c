@@ -90,6 +90,7 @@ static int parse_ofpart_partitions(struct mtd_info *master,
 			}
 		}
 
+		(*pparts)[i].of_node = pp;
 		a_cells = of_n_addr_cells(pp);
 		s_cells = of_n_size_cells(pp);
 		if (len / 4 != a_cells + s_cells) {
